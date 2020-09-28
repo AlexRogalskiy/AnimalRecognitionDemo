@@ -49,6 +49,27 @@ If something went wrong, e.g. you skipped installing git-lfs, you need to force 
 $ docker-compose up --force-recreate --build
 ```
 Open a second terminal for the video capturing:
+
+```
+ajeetraina@Ajeets-MacBook-Pro camera % curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 1841k  100 1841k    0     0  2321k      0 --:--:-- --:--:-- --:--:-- 2321k
+ajeetraina@Ajeets-MacBook-Pro camera % python3 get-pip.py
+/usr/local/lib/python3.8/site-packages/setuptools/distutils_patch.py:25: UserWarning: Distutils was imported before Setuptools. This usage is discouraged and may exhibit undesirable behaviors or errors. Please use Setuptools' objects directly or at least import Setuptools first.
+  warnings.warn(
+Collecting pip
+  Downloading pip-20.2.3-py2.py3-none-any.whl (1.5 MB)
+     |████████████████████████████████| 1.5 MB 1.9 MB/s 
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 20.1.1
+    Uninstalling pip-20.1.1:
+      Successfully uninstalled pip-20.1.1
+Successfully installed pip-20.2.3
+ajeetraina@Ajeets-MacBook-Pro camera %
+```
+
 ```
 $ pip install -r camera/requirements.txt
 $ python camera/read_camera.py
