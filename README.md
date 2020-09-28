@@ -72,6 +72,32 @@ ajeetraina@Ajeets-MacBook-Pro camera %
 
 ```
 $ pip install -r camera/requirements.txt
+```
+
+If it doesnt work, install it manually
+
+```
+ajeetraina@Ajeets-MacBook-Pro camera % sudo pip install opencv-python
+Password:
+WARNING: The directory '/Users/ajeetraina/Library/Caches/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Collecting opencv-python
+  Downloading opencv_python-4.4.0.44-cp38-cp38-macosx_10_13_x86_64.whl (52.3 MB)
+     |████████████████████████████████| 52.3 MB 6.7 MB/s 
+Collecting numpy>=1.17.3
+  Downloading numpy-1.19.2-cp38-cp38-macosx_10_9_x86_64.whl (15.3 MB)
+     |████████████████████████████████| 15.3 MB 8.0 MB/s 
+Installing collected packages: numpy, opencv-python
+  Attempting uninstall: numpy
+    Found existing installation: numpy 1.15.4
+    Uninstalling numpy-1.15.4:
+      Successfully uninstalled numpy-1.15.4
+Successfully installed numpy-1.19.2 opencv-python-4.4.0.44
+ajeetraina@Ajeets-MacBook-Pro camera % 
+```
+
+
+
+
 $ python camera/read_camera.py
 ```
 
