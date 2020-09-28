@@ -22,8 +22,26 @@ To run the demo:
 ```
 $ git clone https://github.com/RedisGears/AnimalRecognitionDemo.git
 $ cd AnimalRecognitionDemo
-# If you don't have it already, install https://git-lfs.github.com/ (On OSX: brew install git-lfs)
-$ git lfs install && git lfs fetch && git lfs checkout
+```
+You will find that very less files were able to check out. To fix this:
+
+```
+brew install git-lfs
+```
+
+```
+ajeetraina@Ajeets-MacBook-Pro AnimalRecognitionDemo % git restore --source=HEAD :/
+ajeetraina@Ajeets-MacBook-Pro AnimalRecognitionDemo % ls
+LICENSE			README.md		architecture.png	docker-compose.yaml	redis
+Makefile		app			camera			frontend		tests
+ajeetraina@Ajeets-MacBook-Pro AnimalRecognitionDemo % git lfs install && git lfs fetch && git lfs checkout
+Updated git hooks.
+Git LFS initialized.
+fetch: Fetching reference refs/heads/master
+Checking out LFS objects: 100% (1/1), 24 MB | 0 B/s, done.
+```
+
+```
 $ docker-compose up
 ```
 If something went wrong, e.g. you skipped installing git-lfs, you need to force docker-compose to rebuild the containers
